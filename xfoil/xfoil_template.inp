@@ -1,0 +1,25 @@
+plop
+g
+
+load %(foilFile)s
+oper
+iter
+1000
+
+
+
+oper
+re %(Re)s
+mach %(Mach)s
+visc
+pacc
+
+
+alfa %(AOA)s
+dump TEMP_xfoil_dump.dat
+cpwr TEMP_xfoil_cpwr.dat
+pwrt
+TEMP_xfoil_pwrt.dat
+plis
+
+quit
