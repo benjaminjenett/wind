@@ -1,0 +1,11 @@
+FINISH
+/PREP7
+/output,NLIST,lis
+NLIST,ALL, , ,XYZ,NODE,NODE,NODE
+/out
+/output,ELIST,lis
+elist,all,,,0,0
+/out
+/output,IRLIST,lis
+IRLIST
+/out
