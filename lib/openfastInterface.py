@@ -86,10 +86,7 @@ def xfoilRun(foil,wd,Re,M,Alpha):
   params = {'Re':Re, 'Mach':M, 'AOA':Alpha, 'foilFile':foil}
   os.chdir(wd)
   createTempFiles('xfoil_template.inp','TEMP_xfoil.inp',params)
-  #ps = subprocess.Popen("xfoil < TEMP_xfoil.inp > TEMP_xfoil.out",shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-  #output = ps.communicate()[0]
   os.system("xfoil < TEMP_xfoil.inp > TEMP_xfoil.out")
-  #cpfile = open('TEMP_xfoil_a%06.3f_dump.dat' % Alpha)
   cp = importTxtFileNumpy('TEMP_xfoil_cpwr.dat',2,2,10000,delimiter=' ')
   x  = importTxtFileNumpy('TEMP_xfoil_cpwr.dat',1,2,10000,delimiter=' ')
   return x,cp
@@ -131,7 +128,8 @@ def importTxtFileNumpy(filename,column,startline=None,endline=None,delimiter=' '
       try:
         tempoutput.append(float(row[column-1]))
       except:
-        tempoutput.append([])
+        if includeNAN:
+          tempoutput.append([])
   if startline is None:
     startline = 1
   if endline is None:

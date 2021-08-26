@@ -1,6 +1,3 @@
-plop
-g
-
 load %(foilFile)s
 oper
 iter
@@ -11,11 +8,11 @@ iter
 oper
 re %(Re)s
 mach %(Mach)s
+alfa %(AOA)s
 visc
 pacc
 
 
-alfa %(AOA)s
 dump TEMP_xfoil_dump.dat
 cpwr TEMP_xfoil_cpwr.dat
 pwrt
