@@ -9,7 +9,7 @@ In general, the top level directory currently contains various scripts that I ha
 ### ansys
 Contains various Ansys simulations showing variations in the performance of the IEA blade with changes to material properties. Most simulations will contain a file 'ansysresults_setXX.txt' which contains the key outputs from the simulation. These files can be parsed into Matlab to allow easy post-processing there due to easier operation than Ansys postproc, and allowing quick comparision. Each folder should contain the shell7.src and .mac files that are used to generate the model used in each analysis. The .src and .mac files are small and can easily be uploaded to github, but the results files may be better stored elsewhere (size ~80MB).
 Several scripts are contained in the folder, as well as loads input files.
-### IEA-3_$_NuMAD
+### IEA-3\_4\_NuMAD
 This folder contains the NuMAD model for the IEA blade, including 2 variations of the model, and 9 variations of the material database. The material database that is desired to be used when running NuMAD should be renamed as MatDBsi.txt prior to opening the model.
 ### lib
 This contains several libraries used for processing data (openFast, xfoil, NuMAD, ansys) and performing calculations.
