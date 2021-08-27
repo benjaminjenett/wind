@@ -1,0 +1,32 @@
+
+
+           ***********  PRECISE MASS SUMMARY  ***********
+
+ TOTAL MASS (X,Y,Z)=  0.0000      0.0000      0.0000    
+
+ MOMENTS AND PRODUCTS OF INERTIA TENSOR (I) ABOUT ORIGIN (GLOBAL CARTESIAN)
+      0.0000      0.0000      0.0000    
+      0.0000      0.0000      0.0000    
+      0.0000      0.0000      0.0000    
+
+ CENTER OF MASS (X,Y,Z)=  0.0000      0.0000      0.0000    
+
+ MOMENTS AND PRODUCTS OF INERTIA TENSOR (I) ABOUT CENTER OF MASS (GLOBAL CARTESIAN)
+      0.0000      0.0000      0.0000    
+      0.0000      0.0000      0.0000    
+      0.0000      0.0000      0.0000    
+
+ PRINCIPAL CENTROIDAL MOMENTS OF INERTIA=  0.0000      0.0000      0.0000    
+
+ ORIENTATION VECTORS (GLOBAL CARTESIAN) FOR THE PRINCIPAL AXES=
+   ( 1.000, 0.000, 0.000) ( 0.000, 1.000, 0.000) ( 0.000, 0.000, 1.000) 
+
+ ANGLES (XY,YZ,XZ) OF THE PRINCIPAL AXES=  0.000      0.000      0.000    
+
+
+
+          *********  TOTAL LOAD SUMMARY  *********
+                                              X-AXIS      Y-AXIS      Z-AXIS
+ FORCES AT CENTER OF MASS..................  0.0000      0.0000      0.0000    
+ MOMENTS ABOUT ORIGIN......................  0.0000      0.0000      0.0000    
+ MOMENTS ABOUT CENTER OF MASS..............  0.0000      0.0000      0.0000    

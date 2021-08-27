@@ -1,0 +1,35 @@
+
+
+                         ***********  PRECISE MASS SUMMARY  ***********
+
+   TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
+               Translational mass               |   Coupled translational/rotational mass
+         13851.        0.0000        0.0000     |     0.0000       0.25030E+06   -3265.6    
+         0.0000        13851.        0.0000     |   -0.25030E+06    0.0000       -4140.4    
+         0.0000        0.0000        13851.     |     3265.6        4140.4        0.0000    
+     ------------------------------------------ | ------------------------------------------
+                                                |         Rotational mass (inertia)
+                                                |    0.78889E+07    2340.4        73526.    
+                                                |     2340.4       0.78927E+07   -30346.    
+                                                |     73526.       -30346.        19810.    
+
+   TOTAL MASS =  13851.    
+     The mass principal axes coincide with the global Cartesian axes
+
+   CENTER OF MASS (X,Y,Z)=  -0.29892       0.23577        18.071    
+
+   TOTAL INERTIA ABOUT CENTER OF MASS
+        0.33649E+07    1364.2       -1296.3    
+         1364.2       0.33682E+07    28667.    
+        -1296.3        28667.        17803.    
+
+   PRINCIPAL INERTIAS =   0.33644E+07   0.33689E+07    17557.    
+   ORIENTATION VECTORS OF THE INERTIA PRINCIPAL AXES IN GLOBAL CARTESIAN
+     ( 0.947,-0.320,-0.003) ( 0.320, 0.947, 0.008) ( 0.000,-0.009, 1.000) 
+
+
+          *********  TOTAL LOAD SUMMARY  *********
+                                              X-AXIS      Y-AXIS      Z-AXIS
+ FORCES AT CENTER OF MASS..................  0.0000      0.0000      0.0000    
+ MOMENTS ABOUT ORIGIN......................  0.0000      0.0000      0.0000    
+ MOMENTS ABOUT CENTER OF MASS..............  0.0000      0.0000      0.0000    
