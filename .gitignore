@@ -1,0 +1,17 @@
+*.old
+*.exe
+__pycache__/*
+__pycache__
+ansys/**/*.dbb
+ansys/**/*.log
+ansys/**/*.mntr
+ansys/**/*.stat
+ansys/**/*.err
+ansys/**/*.lock
+ansys/**/*.page
+ansys/**/*.DSP
+ansys/**/*.emat
+ansys/**/*.esav
+ansys/**/*.full
+IEA-3_4_NuMAD/**/*.src
+IEA-3_4_NuMAD/**/*.mac
