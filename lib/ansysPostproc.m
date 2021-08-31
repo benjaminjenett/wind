@@ -93,7 +93,6 @@ function varargout = ansysPostproc(oper,varargin)
             figure;
             tiledlayout(1,length(range))
             cmaprange = [0,0];
-            %ax = repmat(axis(),length(range));
             for jj = 1:length(range)
                 ii = range(jj);
                 if exist('xmin','var')
@@ -106,7 +105,7 @@ function varargout = ansysPostproc(oper,varargin)
                 variable = variable(index);
                 cmaprange = [min(min(variable),cmaprange(1)), max(max(variable),cmaprange(2))];
                 scatter3(s{ii}.z(index),s{ii}.x(index),s{ii}.y(index),50,variable);
-                title([s{ii}.title, ', max=',num2str(max(variable)),', min=',num2str(min(variable))]);
+                title({s{ii}.title, [plotvar ', max=',num2str(max(variable)),', min=',num2str(min(variable))]});
                 xlabel('z');
                 ylabel('x');
                 zlabel('y');
@@ -234,7 +233,6 @@ function [mats,s] = importResults(filename,headers,nodes,returnvalues)
     splitlocs(end) = length(lines);
     s = struct();
     mats = cell(size(returnvalues));
-    %mats = cell([length(returnvalues),1]);
     for ii = 1:length(returnvalues)
         val = returnvalues(ii);
         hkeys = regexp(headers{val}, ' ', 'split');
@@ -259,14 +257,10 @@ function [mats,s] = importResults(filename,headers,nodes,returnvalues)
         mat = reshape(cell2mat(tempdataset),lendataset,length(tempdataset))';
         for jj = 2:lendataset
             if cell2mat(strfind(tbList,hkeys{jj})) == 1
-                %s = setfield(s,[hkeys(jj) 'top'],[]);
-                %s = setfield(s,[hkeys(jj) 'bot'],[]);
                 [s.([hkeys{jj} 'top']),s.([hkeys{jj} 'bot'])] = returntopbottom(mat,jj-1,nodes);
             elseif cell2mat(strfind(valueList,hkeys{jj})) == 1
-                %s = setfield(s,hkeys{jj},[]);
                 s.(hkeys{jj}) = returnvalue(mat,jj-1,nodes);
             else
-                %s = setfield(s,hkeys{jj},[]);
                 s.(hkeys{jj}) = returnvaluesum(mat,jj-1,nnum);
             end
         end

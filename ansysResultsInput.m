@@ -1,12 +1,26 @@
 %% Using external library
 currentpath = fileparts(matlab.desktop.editor.getActiveFilename);
 fn = [currentpath filesep 'ansys' filesep 'IEAblade_nm03_lattice3x_optimized' filesep 'ansysresults_set06.txt'];
-%addpath([currentpath filesep 'lib']) % add lib folder to path
+addpath([currentpath filesep 'lib']) % add lib folder to path
+outputFolder = [currentpath filesep 'ansys' filesep 'postproc'];
 %load('FEAresults_20210823.mat','s');
-s = ansysPostproc('import', fn, 3); % filenames requires full path
+%s = ansysPostproc('import', fn, 3); % filenames requires full path
 %s = ansysPostproc('append',s,s2);
-ansysPostproc('plot', s, 1, 'UY')
 %[nnum,x,y,z] = ansysPostproc('nodes',fullpath);
+ansysPostproc('plot', s, 8:9, 'UY');
+%% Plot and save
+range = 8:9;
+var = 'UY';
+ansysPostproc('plot', s, range, var);
+set(gcf, 'Position', [1 1 800*length(range) 800]);
+saveas(gcf,[outputFolder filesep var '_' regexprep(num2str(range),'\s+','_') '.png']);
+%% Plot and save loop
+var = 'SEQVbot';
+for ii = 1:length(s)
+    ansysPostproc('plot', s, ii, var);
+    set(gcf, 'Position', [1 1 800 800]);
+    saveas(gcf,[outputFolder filesep var '_' s{ii}.title '.png']);
+end
 %% Test
 contents = fileread(fn);
 contentarray = regexp(contents, '\r\n|\r|\n', 'split');
