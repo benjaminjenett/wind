@@ -1,5 +1,5 @@
 # DLI Wind Energy Study
-The files in this repository are the compilation of the primary files used for studying a lattice structure in a wind turbine blade.
+The files in this repository are the compilation of the primary files used for studying a lattice structure in a wind turbine blade. A more detailed analysis of the project can be found in [ProjectSummary.md](ProjectSummary.md).
 ## File Contents
 The general contents of the repository are shown by folder below. As a general note, none of these files have been tested on more than one computer (Colin's computer).
 Python files have only been tested with Linux (Ubuntu 21.04), and in some cases may need some modifications to run under Windows. The primary issue that I expect is that some file names and folder paths are hard coded in which need to be corrected (ideally using os.path.join or some similar method). Also, the Python files have only been tested in the Spyder IDE, which allows running of code sections, similar to matlab, and maintains variables for later use. Some code will run cleanly straight through, but others sometimes have certain sections which are broken.

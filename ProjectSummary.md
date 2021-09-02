@@ -23,5 +23,25 @@ A sampling of the post-processing results are available in the [ansys/postproc](
 ## Ansys analysis conclusions
 It is difficult to draw extensive conclusions from the FEA simulations. It is not possible to use this model to demonstrate the capability of a lattice blade with new design features. For this, it would be necessary to take a more ground-up approach to the design and use a solid model in key areas to show the benefits of a solid lattice, for example at the tip, or leading and trailing edges.
 The key conclusion that can be observed by a detailed inspection of different results, is regarding the core material. Once the model was properly cleaned up to produce better results, it became clear that despite the substantial reduction in stiffness of the lattice material compared to the balsa core used in the baseline model, there was negligible impact of the switch to the lattice core. This held true in the tip deflection, as well as the Mises stress in the reinforced areas. There is further study required in this area, but the indication of this is that it may be possible to replace balsa cores in the wind turbine blade with a lattice core. The viability of this will be highly dependent on the cost of building the lattice, but it is worth doing further study into the lattice core. The difficulty of sustainable balsa wood harvesting and the weight savings of the lattice core (density reduction from approximately 110kg/m3 to 7kg/m3) offer some appealing opportunities for improvements in the blade market.
+## Comparison of models
+One of the main factors differentiating the different Ansys models is the weight of various materials. For several key models, the weights of different materials are shown. These same labels will be used in further discussion below.
+- IEA3_4MW: Model received from Mayank
+- Balsa Core: Created with Colin's NuMAD model (as are all following models), modeled as closely as possible to the original IEA blade.
+- Lattice 2x Core: .5 percent relative density lattice replaces Balsa Core, with a minimum thickness of 2cm and double the balsa core thickness.
+- Lattice 3x Core: .5 percent relative density lattice replaces Balsa Core, with a minimum thickness of 2cm and triple the balsa core thickness.
+- Lattice 3x Optimized: Similar to Lattice 3x Core, with a few modifications made to skin thickness in the LE, TE, and tip, and with better reinforcement of the tip area.
+
+|Material	|IEA3_4MW	|Balsa Core	|Lattice 2x Core	|Lattice 3x Core	|Lattice 3x Optimized	|
+|---	|---	|---	|---	|---	|---	|
+|Biax webs	|342.7	|335.1	|335.1	|335.1	|335.1	|
+|Triax Shell	|6459.1	|7011.7	|7011.7	|7011.7	|7004.6	|
+|UD LE/TE	|433.2	|307.7	|307.7	|307.7	|307.7	|
+|UD Spar Caps	|6094.6	|6019.3	|6019.3	|6019.3	|6019.3	|
+|Balsa	|967.5	|997.6	|0	|0	|0	|
+|Lattice	|0	|0	|127.9	|189.5	|191.2	|
+|Gelcoat	|225.8	|225.4	|225.4	|225.4	|225.4	|
+|---	|---	|---	|---	|---	|---	|
+|Totals	|14522.9	|14896.9	|14027.2	|14088.8	|14083.3	|
+
 ## General applicability of results
 Part of this exercise is to develop the capability to quickly and easily work with any blade as a baseline. Ideally, when working with a different blade, a NuMAD model combined with either an OpenFast model or load cases would be sufficient to allow investigations into different material systems. The NuMAD model should be easy to update for a clean FEA model, or for different material systems. Since the Ansys model is produced in a consistent way, as long as the NuMAD materials are properly labeled and applied, then it should be straightforward to apply loads. The source of loads may have a different format which will require a new input method, but once they are input to Python, it should be simple to export to Ansys.

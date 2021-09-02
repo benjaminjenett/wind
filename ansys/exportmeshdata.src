@@ -9,3 +9,10 @@ elist,all,,,0,0
 /output,IRLIST,lis
 IRLIST
 /out
+asum
+/output,ALIST,lis
+alist,all
+/out
+/output,SLIST,lis
+SLIST
+/out
