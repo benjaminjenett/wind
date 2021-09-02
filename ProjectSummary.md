@@ -63,7 +63,7 @@ The stress plots do show some difference between the balsa core and the lattice 
 
 ![Balsa Core](ansys/postproc/SEQVtop_Balsa%20Core%20with%20no%20gelcoat.png)
 
-![Lattice 3x](ansys/postproc/SEQVtop_Lattice3x%20Core%20\(corrected\),%20no Gelcoat.png)
+![Lattice 3x](ansys/postproc/SEQVtop_Lattice3x%20Core%20\(corrected\),%20no%20Gelcoat.png)
 
 ![Lattice 3x Optimized](ansys/postproc/SEQVtop_Lattice3x%20optimized.png)
 
