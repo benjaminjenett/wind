@@ -54,25 +54,25 @@ All values in kg, except Vf. All composite laminae are E-Glass.
 ### Flapwise deflection
 Very little difference was observed in flapwise deflection between different models. For comparison, the original balsa core model deflection is shown compared to an optimized lattice design (with skin reinforcement at the tip). The deflection is slightly higher in the lattice blade, but the tip of the optimized blade does not exhibit the excessive deflection of the original models.
 
-![Balsa Core](ansys/postproc/UY_Balsa Core with no gelcoat.png)
+![Balsa Core](ansys/postproc/UY_Balsa%20Core%20with%20no%20gelcoat.png)
 
-![Optimized Lattice Core](ansys/postproc/UY_Lattice3x optimized.png)
+![Optimized Lattice Core](ansys/postproc/UY_Lattice3x%20optimized.png)
 
 ### Top Surface Stress
 The stress plots do show some difference between the balsa core and the lattice core. It should be noted that there are some stress concentrations that occur due to the model which should not occur in a physical object. Mostly these are not visible in the plots, but they affect the coloration of the plots, which is why the plots are mostly blue. The easiest difference to see between the models is in the optimized model, where the high stresses at the tip have been eliminated due to the use of a lattice core in that area. Aside from this, the stress patterns are fairly similar between the various models, but the lattice core model has the lowest peak stress.
 
-![Balsa Core](ansys/postproc/SEQVtop_Balsa Core with no gelcoat.png)
+![Balsa Core](ansys/postproc/SEQVtop_Balsa%20Core%20with%20no%20gelcoat.png)
 
-![Lattice 3x](ansys/postproc/SEQVtop_Lattice3x Core \(corrected\), no Gelcoat.png)
+![Lattice 3x](ansys/postproc/SEQVtop_Lattice3x%20Core%20\(corrected\),%20no Gelcoat.png)
 
-![Lattice 3x Optimized](ansys/postproc/SEQVtop_Lattice3x optimized.png)
+![Lattice 3x Optimized](ansys/postproc/SEQVtop_Lattice3x%20optimized.png)
 
 ### Bottom Surface Stress
 On the bottom surface, the peak stress is somewhat higher in the lattice version than the balsa version, but as noted above, this is likely occurring at a stress concentration that would not occur outside of the model.
 
-![Balsa Core](ansys/postproc/SEQVbot_Balsa Core with no gelcoat.png)
+![Balsa Core](ansys/postproc/SEQVbot_Balsa%20Core%20with%20no%20gelcoat.png)
 
-![Lattice 3x](ansys/postproc/SEQVbot_Lattice3x Core \(corrected\), no Gelcoat.png)
+![Lattice 3x](ansys/postproc/SEQVbot_Lattice3x%20Core%20\(corrected\),%20no%20Gelcoat.png)
 
 
 ## General applicability of results
