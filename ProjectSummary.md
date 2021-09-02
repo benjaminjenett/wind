@@ -31,17 +31,19 @@ One of the main factors differentiating the different Ansys models is the weight
 - Lattice 3x Core: .5 percent relative density lattice replaces Balsa Core, with a minimum thickness of 2cm and triple the balsa core thickness.
 - Lattice 3x Optimized: Similar to Lattice 3x Core, with a few modifications made to skin thickness in the LE, TE, and tip, and with better reinforcement of the tip area.
 
-|Material	|IEA3_4MW	|Balsa Core	|Lattice 2x Core	|Lattice 3x Core	|Lattice 3x Optimized	|
-|---	|---	|---	|---	|---	|---	|
-|Biax webs	|342.7	|335.1	|335.1	|335.1	|335.1	|
-|Triax Shell	|6459.1	|7011.7	|7011.7	|7011.7	|7004.6	|
-|UD LE/TE	|433.2	|307.7	|307.7	|307.7	|307.7	|
-|UD Spar Caps	|6094.6	|6019.3	|6019.3	|6019.3	|6019.3	|
-|Balsa	|967.5	|997.6	|0	|0	|0	|
-|Lattice	|0	|0	|127.9	|189.5	|191.2	|
-|Gelcoat	|225.8	|225.4	|225.4	|225.4	|225.4	|
-|---	|---	|---	|---	|---	|---	|
-|Totals	|14522.9	|14896.9	|14027.2	|14088.8	|14083.3	|
+**Material BOM for Different Blade Iterations**
+All values in kg, except Vf. All composite laminae are E-Glass.
+
+|Material	|IEA3_4MW	|Balsa Core	|Lattice 2x Core	|Lattice 3x Core	|Lattice 3x Optimized	| Vf |
+|---	|---	|---	|---	|---	|---	|---|
+|Biax webs	|342.7	|335.1	|335.1	|335.1	|335.1	|.5|
+|Triax Shell	|6459.1	|7011.7	|7011.7	|7011.7	|7004.6	|.5|
+|UD LE/TE	|433.2	|307.7	|307.7	|307.7	|307.7	|.55|
+|UD Spar Caps	|6094.6	|6019.3	|6019.3	|6019.3	|6019.3	|.55|
+|Balsa	|967.5	|997.6	|0	|0	|0	||
+|Lattice	|0	|0	|127.9	|189.5	|191.2	||
+|Gelcoat	|225.8	|225.4	|225.4	|225.4	|225.4	||
+|Totals	|14522.9	|14896.9	|14027.2	|14088.8	|14083.3	||
 
 ## General applicability of results
 Part of this exercise is to develop the capability to quickly and easily work with any blade as a baseline. Ideally, when working with a different blade, a NuMAD model combined with either an OpenFast model or load cases would be sufficient to allow investigations into different material systems. The NuMAD model should be easy to update for a clean FEA model, or for different material systems. Since the Ansys model is produced in a consistent way, as long as the NuMAD materials are properly labeled and applied, then it should be straightforward to apply loads. The source of loads may have a different format which will require a new input method, but once they are input to Python, it should be simple to export to Ansys.
